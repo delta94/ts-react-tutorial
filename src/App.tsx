@@ -2,12 +2,14 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Greetings from "./Greeting";
+import Counter from "./Counter";
 
 const App = () => {
-  const onClick = (name: String) => {
-    console.log(`${name} says Hello`);
-  };
-  return <Greetings name="React" mark="^_^" onClick={onClick} />;
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
 export default App;

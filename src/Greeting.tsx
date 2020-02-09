@@ -4,17 +4,18 @@ type GreetingProps = {
   name: string;
   mark: string;
   optional?: string;
-  onClick: (name: String) => void;
 };
 
-const Greetings = ({ name, mark, optional, onClick }: GreetingProps) => {
-  const handleClick = () => onClick(name);
+const Greetings = ({ name, mark, optional }: GreetingProps) => {
+  const onClick = () => {
+    console.log(`${name} says Hello`);
+  };
   return (
     <div>
       Hello, {name} {mark}
       {optional && <p>{optional}</p>}
       <div>
-        <button onClick={handleClick}>Click Me</button>
+        <button onClick={onClick}>Click Me</button>
       </div>
     </div>
   );
