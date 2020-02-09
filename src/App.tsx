@@ -7,7 +7,10 @@ import MyForm from "./MyForm";
 import ReducerSample from "./ReducerSample";
 
 const App = () => {
-  return <ReducerSample />;
+  const onSubimt = (form: { name: string; description: string }) => {
+    console.log(form);
+  };
+  return <MyForm onSubmit={onSubimt} />;
 };
 
 export default App;
